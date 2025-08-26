@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "95d718dd-cb99-46be-8ce4-300f584ec6c9",
+		"name": "ERP Agent API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47449464"
+	},
+	"item": [
+		{
+			"name": "Start Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"erp\",\r\n  \"task\": \"initialize\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/erp/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"erp",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"erp\",\r\n  \"task\": \"initialize\"\r\n  \r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/erp/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"erp",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5d-dtQLjs2wqXV9viHLG+eBuWL950I\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"ERP agent started\",\n    \"data\": {\n        \"agent\": \"erp\",\n        \"task\": \"initialize\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Query Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"erp\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/erp/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"erp",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"ERP\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/erp/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"erp",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-LmJzE/nH3XM976vNSUJ1Ujc5Mwo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"ERP agent query processed.\",\n    \"response\": \"ERP Bot received: Show me today's interviews\",\n    \"query\": \"Show me today's interviews\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Workflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"erp\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/erp/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"erp",
+						"workflow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workflow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"ERP\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/erp/workflow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"erp",
+								"workflow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "158"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9e-C55YWewPL54ivwD2JpxAxaXTxLA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"ERP agent workflow executed.\",\n    \"response\": \"ERP workflow \\\"send onboarding email\\\" executed.\",\n    \"workflow\": \"send onboarding email\"\n}"
+				}
+			]
+		}
+	]
+}

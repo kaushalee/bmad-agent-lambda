@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "3a21d52f-e6ce-4bba-97a5-653640c63466",
+		"name": "chatbot Agent API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47449464"
+	},
+	"item": [
+		{
+			"name": "Start Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"task\": \"initialize\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/chatbot/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"chatbot",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"task\": \"initialize\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/chatbot/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"chatbot",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-mmcuqS/6L13bkM50y5N69HZBTew\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:19:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"CHATBOT agent started\",\n    \"data\": {\n        \"agent\": \"chatbot\",\n        \"task\": \"initialize\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Query Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/chatbot/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"chatbot",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/chatbot/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"chatbot",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "186"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ba-iMHNvOc9g2buEzKf7ux1OXE0L4M\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"CHATBOT agent query processed.\",\n    \"response\": \"General Chatbot says: \\\"Show me today's interviews\\\" sounds interesting!\",\n    \"query\": \"Show me today's interviews\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Workflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/chatbot/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"chatbot",
+						"workflow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workflow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"chatbot\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/chatbot/workflow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"chatbot",
+								"workflow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a7-4Er4EZRu6SEaxkzx3JQgOIATn5E\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:22:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"CHATBOT agent workflow executed.\",\n    \"response\": \"General workflow \\\"send onboarding email\\\" activated.\",\n    \"workflow\": \"send onboarding email\"\n}"
+				}
+			]
+		}
+	]
+}

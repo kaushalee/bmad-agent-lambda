@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "836768e7-01e1-4398-a00f-bfc8c4ad563d",
+		"name": "SEO Agent API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47449464"
+	},
+	"item": [
+		{
+			"name": "Start Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"seo\",\r\n  \"task\": \"initialize\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/seo/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"seo",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"seo\",\r\n  \"task\": \"initialize\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/seo/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"seo",
+								"start"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5d-mLxQj2YFjVV/y/PQbnTgJ0M1E9w\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"SEO agent started\",\n    \"data\": {\n        \"agent\": \"seo\",\n        \"task\": \"initialize\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Query Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"seo\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/seo/query",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"seo",
+						"query"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Query Agent",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"seo\",\r\n  \"query\": \"Show me today's interviews\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/seo/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"seo",
+								"query"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-vABSeAwlxiGJNxSpe/6Y7vmzMdQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:20:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"SEO agent query processed.\",\n    \"response\": \"SEO Bot received: Show me today's interviews\",\n    \"query\": \"Show me today's interviews\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Workflow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"agent\": \"seo\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/agent/seo/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"agent",
+						"seo",
+						"workflow"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Workflow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent\": \"SEO\",\r\n  \"workflow\": \"send onboarding email\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/agent/seo/workflow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"agent",
+								"seo",
+								"workflow"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9d-NddKoXnf1oBCLdI8QnaKWX6M41o\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Aug 2025 02:21:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"SEO agent workflow executed.\",\n    \"response\": \"SEO workflow \\\"send onboarding email\\\" started.\",\n    \"workflow\": \"send onboarding email\"\n}"
+				}
+			]
+		}
+	]
+}

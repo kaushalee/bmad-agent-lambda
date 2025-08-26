@@ -8,6 +8,8 @@
     "bmad-method": "tools/bmad-npx-wrapper.js"
   },
   "scripts": {
+    "start": "node tools/cli.js",
+    "serve": "nodemon server.js",
     "build": "node tools/cli.js build",
     "build:agents": "node tools/cli.js build --agents-only",
     "build:teams": "node tools/cli.js build --teams-only",
@@ -35,14 +37,19 @@
   },
   "dependencies": {
     "@kayvan/markdown-tree-parser": "^1.5.0",
+    "@pinecone-database/pinecone": "^6.1.2",
     "bmad-method": "^4.30.3",
     "chalk": "^4.1.2",
     "commander": "^14.0.0",
+    "dotenv": "^17.2.1",
+    "express": "^4.18.2",
     "fs-extra": "^11.3.0",
     "glob": "^11.0.3",
     "inquirer": "^8.2.6",
     "js-yaml": "^4.1.0",
     "minimatch": "^10.0.3",
+    "mongodb": "^6.18.0",
+    "openai": "^5.12.2",
     "ora": "^5.4.1"
   },
   "keywords": [
@@ -69,6 +76,7 @@
     "husky": "^9.1.7",
     "jest": "^30.0.4",
     "lint-staged": "^16.1.1",
+    "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "semantic-release": "^22.0.0",
     "yaml-lint": "^1.7.0"
