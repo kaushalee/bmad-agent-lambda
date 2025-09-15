@@ -28,7 +28,7 @@ const controller = require('./controller');
 router.post('/start', async (req, res) => {
   try {
     const result = await controller.startAgent(req.body);
-    res.json(result);
+    res.json(result);  //  THIS sends the response to Postman
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -37,7 +37,7 @@ router.post('/start', async (req, res) => {
 router.post('/query', async (req, res) => {
   try {
     const result = await controller.queryAgent(req.body);
-    res.json(result);
+    res.json(result);   //  THIS sends the response to Postman
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -46,7 +46,7 @@ router.post('/query', async (req, res) => {
 router.post('/workflow', async (req, res) => {
   try {
     const result = await controller.workflowAgent(req.body);
-    res.json(result);
+    res.json(result);   //  THIS sends the response to Postman
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
